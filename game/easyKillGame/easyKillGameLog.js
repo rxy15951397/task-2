@@ -29,6 +29,7 @@ angular.module('app').controller('easyKillGameLog', ['$rootScope', '$scope', '$s
                             var instance = confirm('玩家依次发言！');
                             instance.then(function (resolved) {
                                 vm.domData[$index]['speakByDie']['isChecked'] = true;
+                                $rootScope.saveDeskGame();
                             }, function (rejected) {
                             })
                         }();
@@ -38,6 +39,7 @@ angular.module('app').controller('easyKillGameLog', ['$rootScope', '$scope', '$s
                             var instance = confirm('玩家依次发言！');
                             instance.then(function (resolved) {
                                 vm.domData[$index]['speakByLive']['isChecked'] = true;
+                                $rootScope.saveDeskGame();
                             }, function (rejected) {
                             })
                         }();
